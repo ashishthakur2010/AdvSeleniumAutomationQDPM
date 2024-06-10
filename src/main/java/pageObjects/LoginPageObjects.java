@@ -11,11 +11,12 @@ public class LoginPageObjects {
     public WebElement txt_login;
     @FindBy(name = "login[password")
     public WebElement txt_password;
-    @FindBy(xpath = "//button[@type='submit' and text()='Login ']")
+    @FindBy(xpath = "//button[@type='submit' and text()='Login ']") //button[normalize-space()='Login']
     public WebElement btn_login;
 
 //PageFactory: is a class provided by Selenium WebDriver that helps initialize elements of a Page Object.
 //initElements(): method initializes elements of the current class (this) with the WebDriver instance provided (driver).
+//initElements: This is a method call. It's used to initialize elements of a page object.
 //in_short this code initializes all the web elements declared in the LoginPageObjects class using the provided WebDriver instance.
     public LoginPageObjects(WebDriver driver) {
         PageFactory.initElements(driver, this); //this refers current class u may also write "LoginPageObjects"
