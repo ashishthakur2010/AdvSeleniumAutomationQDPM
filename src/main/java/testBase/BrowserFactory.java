@@ -1,5 +1,6 @@
 package testBase;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,7 +16,6 @@ public class BrowserFactory {
         WebDriver driver =null;
         if(browserName.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
-            //System.setProperty("webdriver.chrome.silentOutput", "true");
             ChromeOptions cOptions = new ChromeOptions();
             cOptions.addArguments("--incognito");
             //cOptions.addArguments("--headless");

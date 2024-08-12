@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel= "methods" thread-count="5">
-    <test  name="AdvSeleniumAutomationQDPM">
-        <classes><class name="Test.TestCases">
-
-        </class></classes>
-    </test>
-</suite>
+<suite name="AdvSeleniumAutomationQDPM" parallel= "tests" thread-count="3">
+    <listeners>
+        <listener class-name="reusableComponents.ListensImplementation" />
+    </listeners>
+    <test name="Test">
+        <classes>
+            <class name="Tests.TestCases" />
+        </classes>
+    </test> <!-- Tests -->
+<!--    <test name="DataDriven Tests">-->
+<!--        <classes>-->
+<!--            <class name="Tests.TestCases" />-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Tests &ndash;&gt;-->
+</suite> <!-- Suite -->

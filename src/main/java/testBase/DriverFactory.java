@@ -35,7 +35,7 @@ public class DriverFactory {
       }
       public void closeDriver() throws InterruptedException {
           Thread.sleep(3000);
-            driver.get().close();
+            driver.get().quit();
             driver.remove();
       }
 
